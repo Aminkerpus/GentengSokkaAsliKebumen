@@ -1,2 +1,0 @@
-# GentengSokkaAsliKebumen
-Website genteng
