@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fungsi untuk menangani pemilihan warna
     document.querySelectorAll('.color-box').forEach(colorBox => {
         colorBox.addEventListener('click', function() {
-            if (!this.classList.contains('active') && !this.querySelector('.color-status').classList.contains('unavailable')) {
+            if (!this.classList.contains('active') && !this.querySelector('.color-name').classList.contains('unavailable')) {
                 document.querySelectorAll('.color-box').forEach(cb => {
                     cb.classList.remove('active');
                 });
