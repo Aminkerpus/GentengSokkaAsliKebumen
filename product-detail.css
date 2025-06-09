@@ -1,3 +1,5 @@
+  min-width: 100%;
+    }
 /* STYLE HEADER DETAIL */
 .detail-header {
     text-align: center;
@@ -398,4 +400,4 @@
     .order-button, .back-button {
         min-width: 100%;
     }
-}
+}}
