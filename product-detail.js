@@ -1,5 +1,20 @@
 // Fungsi untuk menangani perubahan thumbnail dan scroll gambar
 document.addEventListener('DOMContentLoaded', function() {
+    const product = JSON.parse(localStorage.getItem('selectedProduct'));
+    
+    if (product) {
+        // Update konten halaman dengan data produk
+        document.getElementById('product-title').textContent = product.title;
+        document.getElementById('product-price').textContent = product.price;
+        document.getElementById('product-full-description').textContent = product.description;
+        
+        // Update WhatsApp link
+        const waLink = document.querySelector('.order-button');
+        waLink.href = `https://wa.me/6285282214033?text=Saya%20ingin%20memesan%20${encodeURIComponent(product.title)}`;
+    } else {
+        // Fallback jika tidak ada produk
+        console.warn('Produk tidak ditemukan');
+    }
     const thumbnails = document.querySelectorAll('.thumbnail');
     const mainImage = document.getElementById('main-product-image');
     const dots = document.querySelectorAll('.dot');
