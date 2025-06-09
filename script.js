@@ -5,77 +5,154 @@ const products = [
         title: "Genteng Morando Glasur",
         description: "Genteng kualitas premium dengan ketebalan Maksimal , tahan lama dan tahan cuaca ekstrim. Tersedia warna  brown dan transparan",
         price: "Rp 5.800 / buah",
-        category: "top"
+        category: "top",
+        fullDescription: "Genteng kualitas premium dengan ketebalan maksimal...",
+        specs: [
+            "Dimensi: 30cm x 20cm x 1.5cm",
+            "Berat: 2.5 kg/buah",
+            "Kebutuhan per m²: 24 buah",
+            "Garansi: 10 tahun"
+        ]
     },
     {
         id: 2,
         title: "Genteng Morando Natural",
         description: "Genteng kualitas terbaik dengan permukaan halus dan warna merata, cocok untuk rumah mewah.",
         price: "Rp 2.600 / buah",
-        category: "top"
+        category: "top",
+        fullDescription: "Genteng kualitas premium dengan ketebalan maksimal...",
+        specs: [
+            "Dimensi: 30cm x 20cm x 1.5cm",
+            "Berat: 2.5 kg/buah",
+            "Kebutuhan per m²: 24 buah",
+            "Garansi: 10 tahun"
+        ]
     },
     {
         id: 3,
         title: "Genteng Jenis Kodok",
         description: "Genteng kualitas baik dengan harga terjangkau, cocok untuk perumahan standar.",
         price: "Rp 1.900 / buah",
-        category: "top"
+        category: "top",
+        fullDescription: "Genteng kualitas premium dengan ketebalan maksimal...",
+        specs: [
+            "Dimensi: 30cm x 20cm x 1.5cm",
+            "Berat: 2.5 kg/buah",
+            "Kebutuhan per m²: 24 buah",
+            "Garansi: 10 tahun"
+        ]
     },
     {
         id: 4,
         title: "Genteng Magas Biasa",
         description: "Genteng kualitas menengah atas dengan ketahanan baik, sedikit toleransi warna Tersedia magas orisinil L dan waferan.",
         price: "Rp 1.400 / buah",
-        category: "kw1"
+        category: "kw1",
+        fullDescription: "Genteng kualitas premium dengan ketebalan maksimal...",
+        specs: [
+            "Dimensi: 30cm x 20cm x 1.5cm",
+            "Berat: 2.5 kg/buah",
+            "Kebutuhan per m²: 24 buah",
+            "Garansi: 10 tahun"
+        ]
     },
     {
         id: 5,
         title: "Genteng Magas Ekonomi",
         description: "Genteng kualitas menengah, cocok untuk bangunan dengan anggaran terbatas.",
         price: "Rp 1.300 / buah",
-        category: "kw1"
+        category: "kw1",
+        fullDescription: "Genteng kualitas premium dengan ketebalan maksimal...",
+        specs: [
+            "Dimensi: 30cm x 20cm x 1.5cm",
+            "Berat: 2.5 kg/buah",
+            "Kebutuhan per m²: 24 buah",
+            "Garansi: 10 tahun"
+        ]
     },
     {
         id: 6,
         title: "Genteng Plentong Gepak",
         description: "Genteng ekonomis dengan kualitas memadai untuk bangunan sederhana.",
         price: "Rp 1.500 / buah",
-        category: "kw1"
+        category: "kw1",
+        fullDescription: "Genteng kualitas premium dengan ketebalan maksimal...",
+        specs: [
+            "Dimensi: 30cm x 20cm x 1.5cm",
+            "Berat: 2.5 kg/buah",
+            "Kebutuhan per m²: 24 buah",
+            "Garansi: 10 tahun"
+        ]
     },
     {
         id: 7,
         title: "Genteng Plentong Bulet",
         description: "Genteng ekonomis kualitas terbaik di kelasnya, cocok untuk bangunan tambahan.",
         price: "Rp 1.500 / buah",
-        category: "kw2"
+        category: "kw2",
+        fullDescription: "Genteng kualitas premium dengan ketebalan maksimal...",
+        specs: [
+            "Dimensi: 30cm x 20cm x 1.5cm",
+            "Berat: 2.5 kg/buah",
+            "Kebutuhan per m²: 24 buah",
+            "Garansi: 10 tahun"
+        ]
     },
     {
         id: 8,
         title: "Genteng Dorengan Gepak",
         description: "Genteng standar untuk gudang atau bangunan non-hunian, harga ekonomis.",
         price: "Rp 1.000 / buah",
-        category: "kw2"
+        category: "kw2",
+        fullDescription: "Genteng kualitas premium dengan ketebalan maksimal...",
+        specs: [
+            "Dimensi: 30cm x 20cm x 1.5cm",
+            "Berat: 2.5 kg/buah",
+            "Kebutuhan per m²: 24 buah",
+            "Garansi: 10 tahun"
+        ]
     },
     {
         id: 9,
         title: "Genteng Dorengan Plentong",
         description: "Genteng harga termurah, cocok untuk bangunan sementara atau pagar.",
         price: "Rp 900 / buah",
-        category: "kw2"
+        category: "kw2",
+        fullDescription: "Genteng kualitas premium dengan ketebalan maksimal...",
+        specs: [
+            "Dimensi: 30cm x 20cm x 1.5cm",
+            "Berat: 2.5 kg/buah",
+            "Kebutuhan per m²: 24 buah",
+            "Garansi: 10 tahun"
+        ]
     },
     {
         id: 10,
         title: "Genteng Kerpus Premium",
         description: "Genteng kerpus kualitas terbaik dengan ketebalan ekstra dan finishing premium.",
         price: "Rp 1.800 / buah",
-        category: "kerpus"
+        category: "kerpus",
+        fullDescription: "Genteng kualitas premium dengan ketebalan maksimal...",
+        specs: [
+            "Dimensi: 30cm x 20cm x 1.5cm",
+            "Berat: 2.5 kg/buah",
+            "Kebutuhan per m²: 24 buah",
+            "Garansi: 10 tahun"
+        ]
     },
     {
         id: 11,
         title: "Genteng Kerpus Standar",
         description: "Genteng kerpus dengan kualitas bagus dan harga terjangkau.",
         price: "Rp 1.500 / buah",
-        category: "kerpus"
+        category: "kerpus",
+        fullDescription: "Genteng kualitas premium dengan ketebalan maksimal...",
+        specs: [
+            "Dimensi: 30cm x 20cm x 1.5cm",
+            "Berat: 2.5 kg/buah",
+            "Kebutuhan per m²: 24 buah",
+            "Garansi: 10 tahun"
+        ]
     }
 ];
 
@@ -264,6 +341,20 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.getElementById('search-input').addEventListener('keypress', function(e) {
         if (e.key === 'Enter') performSearch();
+    });
+    
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.detail-button')) {
+            e.preventDefault();
+            const productId = e.target.closest('.product-card').dataset.id;
+            const product = products.find(p => p.id == productId);
+            
+            // Simpan produk di localStorage
+            localStorage.setItem('selectedProduct', JSON.stringify(product));
+            
+            // Redirect ke halaman detail
+            window.location.href = 'product-detail.html';
+        }
     });
     
     document.getElementById('prev-result').addEventListener('click', () => {
