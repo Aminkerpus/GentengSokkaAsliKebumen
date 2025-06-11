@@ -339,7 +339,7 @@
 }
 
 .order-button:hover {
-    background-color: var(--primary-dark);
+    background-color: #d4c5baff;
     transform: translateY(-2px);
 }
 
