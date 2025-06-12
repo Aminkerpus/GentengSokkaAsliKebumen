@@ -39,9 +39,32 @@ document.addEventListener('DOMContentLoaded', function() {
                               product.category === 'kw1' ? 'kw1' : 'kw2';
         productBadge.classList.add('product-badge', `badge-${product.category}`);
         
-        // Update WhatsApp link
-        const waLink = document.querySelector('.order-button');
-        waLink.href = `https://wa.me/6285282214033?text=Saya%20ingin%20memesan%20${encodeURIComponent(product.title)}`;
+        function updateWhatsAppOrder() {
+            const selectedColor = document.querySelector('.color-box.active .color-name').textContent;
+            const quantity = document.getElementById('product-qty').value;
+            
+            const message = `Halo, saya ingin memesan:\n\n` +
+                           `Produk: ${product.title}\n` +
+                           `Warna: ${selectedColor}\n` +
+                           `Jumlah: ${quantity} buah\n\n` +
+                           `Apakah masih tersedia?`;
+            
+            const waButton = document.getElementById('whatsapp-order-button');
+            waButton.href = `https://wa.me/6285282214033?text=${encodeURIComponent(message)}`;
+        }
+
+        // Update link WhatsApp pertama kali
+        updateWhatsAppOrder();
+
+        // Tambahkan event untuk warna
+        document.querySelectorAll('.color-box').forEach(box => {
+            box.addEventListener('click', updateWhatsAppOrder);
+        });
+
+        // Tambahkan event untuk jumlah
+        document.getElementById('increase-qty').addEventListener('click', updateWhatsAppOrder);
+        document.getElementById('decrease-qty').addEventListener('click', updateWhatsAppOrder);
+        document.getElementById('product-qty').addEventListener('change', updateWhatsAppOrder);
         
         // Set gambar utama
         mainImage.src = productImages[0];
@@ -101,13 +124,14 @@ document.addEventListener('DOMContentLoaded', function() {
         currentImageIndex = (currentImageIndex + 1) % productImages.length;
         changeMainImage(currentImageIndex);
     });
+    
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') {
-            currentImageIndex = (currentImageIndex - 1 + imageSources.length) % imageSources.length;
+            currentImageIndex = (currentImageIndex - 1 + productImages.length) % productImages.length;
             changeMainImage(currentImageIndex);
         } else if (e.key === 'ArrowRight') {
-            currentImageIndex = (currentImageIndex + 1) % imageSources.length;
+            currentImageIndex = (currentImageIndex + 1) % productImages.length;
             changeMainImage(currentImageIndex);
         }
     });
@@ -124,17 +148,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Fungsi untuk mengatur jumlah produk (per 100)
+    // Fungsi untuk mengatur jumlah produk
     document.getElementById('increase-qty').addEventListener('click', function() {
         const qtyInput = document.getElementById('product-qty');
-        qtyInput.value = parseInt(qtyInput.value) + 10;
+        let newValue = parseInt(qtyInput.value) + 100;
+        if (newValue < 1000) newValue = 1000;
+        qtyInput.value = newValue;
     });
     
     document.getElementById('decrease-qty').addEventListener('click', function() {
         const qtyInput = document.getElementById('product-qty');
-        if (parseInt(qtyInput.value) > 100) {
-            qtyInput.value = parseInt(qtyInput.value) - 100;
-        }
+        let newValue = parseInt(qtyInput.value) - 100;
+        if (newValue < 1000) newValue = 1000;
+        qtyInput.value = newValue;
     });
     
     // Validasi input manual
@@ -153,25 +179,25 @@ document.addEventListener('DOMContentLoaded', function() {
     let isDragging = false;
     let startX, scrollLeft;
     
-    thumbnailContainer.addEventListener('mousedown', (e) => {
+    thumbnailsContainer.addEventListener('mousedown', (e) => {
         isDragging = true;
-        startX = e.pageX - thumbnailContainer.offsetLeft;
-        scrollLeft = thumbnailContainer.scrollLeft;
+        startX = e.pageX - thumbnailsContainer.offsetLeft;
+        scrollLeft = thumbnailsContainer.scrollLeft;
     });
     
-    thumbnailContainer.addEventListener('mouseleave', () => {
+    thumbnailsContainer.addEventListener('mouseleave', () => {
         isDragging = false;
     });
     
-    thumbnailContainer.addEventListener('mouseup', () => {
+    thumbnailsContainer.addEventListener('mouseup', () => {
         isDragging = false;
     });
     
-    thumbnailContainer.addEventListener('mousemove', (e) => {
+    thumbnailsContainer.addEventListener('mousemove', (e) => {
         if (!isDragging) return;
         e.preventDefault();
-        const x = e.pageX - thumbnailContainer.offsetLeft;
+        const x = e.pageX - thumbnailsContainer.offsetLeft;
         const walk = (x - startX) * 2;
-        thumbnailContainer.scrollLeft = scrollLeft - walk;
+        thumbnailsContainer.scrollLeft = scrollLeft - walk;
     });
 });
