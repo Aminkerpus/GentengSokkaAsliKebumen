@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                               product.category === 'kw1' ? 'kw1' : 'kw2';
         productBadge.classList.add('product-badge', `badge-${product.category}`);
         
+        // Update WhatsApp link
         function updateWhatsAppOrder() {
             const selectedColor = document.querySelector('.color-box.active .color-name').textContent;
             const quantity = document.getElementById('product-qty').value;
@@ -55,17 +56,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Update link WhatsApp pertama kali
         updateWhatsAppOrder();
-
-        // Tambahkan event untuk warna
-        document.querySelectorAll('.color-box').forEach(box => {
-            box.addEventListener('click', updateWhatsAppOrder);
-        });
-
-        // Tambahkan event untuk jumlah
-        document.getElementById('increase-qty').addEventListener('click', updateWhatsAppOrder);
-        document.getElementById('decrease-qty').addEventListener('click', updateWhatsAppOrder);
-        document.getElementById('product-qty').addEventListener('change', updateWhatsAppOrder);
-        
         // Set gambar utama
         mainImage.src = productImages[0];
         
@@ -124,14 +114,13 @@ document.addEventListener('DOMContentLoaded', function() {
         currentImageIndex = (currentImageIndex + 1) % productImages.length;
         changeMainImage(currentImageIndex);
     });
-    
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') {
-            currentImageIndex = (currentImageIndex - 1 + productImages.length) % productImages.length;
+            currentImageIndex = (currentImageIndex - 1 + imageSources.length) % imageSources.length;
             changeMainImage(currentImageIndex);
         } else if (e.key === 'ArrowRight') {
-            currentImageIndex = (currentImageIndex + 1) % productImages.length;
+            currentImageIndex = (currentImageIndex + 1) % imageSources.length;
             changeMainImage(currentImageIndex);
         }
     });
@@ -148,19 +137,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Fungsi untuk mengatur jumlah produk
+    // Fungsi untuk mengatur jumlah produk (per 100)
     document.getElementById('increase-qty').addEventListener('click', function() {
         const qtyInput = document.getElementById('product-qty');
-        let newValue = parseInt(qtyInput.value) + 100;
-        if (newValue < 1000) newValue = 1000;
-        qtyInput.value = newValue;
+        qtyInput.value = parseInt(qtyInput.value) + 10;
     });
     
     document.getElementById('decrease-qty').addEventListener('click', function() {
         const qtyInput = document.getElementById('product-qty');
-        let newValue = parseInt(qtyInput.value) - 100;
-        if (newValue < 1000) newValue = 1000;
-        qtyInput.value = newValue;
+        if (parseInt(qtyInput.value) > 100) {
+            qtyInput.value = parseInt(qtyInput.value) - 100;
+        }
     });
     
     // Validasi input manual
@@ -179,25 +166,25 @@ document.addEventListener('DOMContentLoaded', function() {
     let isDragging = false;
     let startX, scrollLeft;
     
-    thumbnailsContainer.addEventListener('mousedown', (e) => {
+    thumbnailContainer.addEventListener('mousedown', (e) => {
         isDragging = true;
-        startX = e.pageX - thumbnailsContainer.offsetLeft;
-        scrollLeft = thumbnailsContainer.scrollLeft;
+        startX = e.pageX - thumbnailContainer.offsetLeft;
+        scrollLeft = thumbnailContainer.scrollLeft;
     });
     
-    thumbnailsContainer.addEventListener('mouseleave', () => {
+    thumbnailContainer.addEventListener('mouseleave', () => {
         isDragging = false;
     });
     
-    thumbnailsContainer.addEventListener('mouseup', () => {
+    thumbnailContainer.addEventListener('mouseup', () => {
         isDragging = false;
     });
     
-    thumbnailsContainer.addEventListener('mousemove', (e) => {
+    thumbnailContainer.addEventListener('mousemove', (e) => {
         if (!isDragging) return;
         e.preventDefault();
-        const x = e.pageX - thumbnailsContainer.offsetLeft;
+        const x = e.pageX - thumbnailContainer.offsetLeft;
         const walk = (x - startX) * 2;
-        thumbnailsContainer.scrollLeft = scrollLeft - walk;
+        thumbnailContainer.scrollLeft = scrollLeft - walk;
     });
 });
