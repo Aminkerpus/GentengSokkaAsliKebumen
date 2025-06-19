@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Update link WhatsApp pertama kali
         updateWhatsAppOrder();
+        
          // Tambahkan event untuk warna
         document.querySelectorAll('.color-box').forEach(box => {
             box.addEventListener('click', updateWhatsAppOrder);

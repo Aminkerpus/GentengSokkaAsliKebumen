@@ -55,7 +55,7 @@ const productsData = [    // Data produk tetap sama seperti sebelumnyaconst prod
             "product/img/morando2.jpg"
         ],
         description: "Genteng dengan tampilan kuat dan elegan dengan perlindungan superior, tahan bocor, tahan lama.",
-        price: "Rp 5.800 / buah",
+        price: "Rp 2.825 / buah",
         category: "top",
         fullDescription: "Genteng Morando menghadirkan kombinasi sempurna antara kekuatan dan estetika. Dibuat dari keramik berkualitas tinggi dengan sistem interlocking presisi, genteng ini memberikan perlindungan maksimal terhadap cuaca ekstrem, mencegah kebocoran, dan meminimalkan perawatan. memberikan kesan  hangat dan modern, Morando menambah nilai estetika hunian Anda. kokoh, serta mudah dipasang, genteng ini adalah pilihan ideal bagi Anda yang menginginkan atap premium yang tahan lama dan berkelas. Siap meningkatkan kualitas properti Anda? Pilih Genteng Morando!",
         specs: [
@@ -76,7 +76,7 @@ const productsData = [    // Data produk tetap sama seperti sebelumnyaconst prod
             "product/img/magas3.jpg"
         ],
         description: "Genteng kualitas terbaik dengan lapis glasur premium, kilap mewah, tahan cuaca, pemasangan mudah, atap anggun dan kuat.",
-        price: "Rp 2.600 / buah",
+        price: "Rp 4.625 / buah",
         category: "top",
         fullDescription: "Genteng Magas Glasur menggabungkan keramik solid dengan lapisan glasur premium untuk tampilan mewah. Ukuran 29 × 23 cm, jarak reng 23 cm, ketebalan 1,4 cm, berat ± 1,6 kg, kebutuhan 25 pcs/m². Desain interlocking canggih menghasilkan sambungan kuat tanpa celah, melindungi hunian dari kebocoran. Glasur anti-UV menjaga kilap warna, pori rendah menghindari kelembapan berlebih dan tumbuh lumut. Ringan dan mudah dipasang, genteng ini ideal untuk projek arsitektur modern yang menuntut performa dan estetika tinggi.",
         specs: [
@@ -97,7 +97,7 @@ const productsData = [    // Data produk tetap sama seperti sebelumnyaconst prod
             "product/img/kodok1.jpg"
         ],
         description: "Genteng klasik warisan Hindia-Belanda, desain ikonik, keramik kuat, ventilasi optimal, menambah karakter klasik rumah.",
-        price: "Rp 2.300 / buah",
+        price: "Rp 2.025 / buah",
         category: "top",
         fullDescription: "Genteng Kodok, atau genteng pentol Hindia-Belanda, hadir dengan profil melengkung unik yang meningkatkan sirkulasi udara di bawah atap. Dimensi 27 × 21 cm, jarak reng 22 cm, ketebalan 1,2 cm, berat ± 1,5 kg, dan kebutuhan 25 pcs/m². Bentuk klasiknya menambah daya tarik arsitektur heritage, sementara pemasangan tanpa sambungan tambahan mempercepat proses instalasi. Pilihan sempurna untuk restorasi bangunan tua atau hunian bergaya kolonial.",
         specs: [
@@ -118,7 +118,7 @@ const productsData = [    // Data produk tetap sama seperti sebelumnyaconst prod
             "product/img/magas1.jpg"
         ],
         description: "Genteng  terlaris dengan perlindungan handal, dan awet, harga terjangkau, pemasangan praktis, solusi atap efisien.",
-        price: "Rp 2.250 / buah",
+        price: "Rp 1.825/ buah",
         category: "kw1",
         fullDescription: "Genteng Magas Glasur menggabungkan keramik solid dengan lapisan glasur premium untuk tampilan mewah. Ukuran 29 × 23 cm, jarak reng 23 cm, ketebalan 1,4 cm, berat ± 1,6 kg, kebutuhan 25 pcs/m². Desain interlocking canggih menghasilkan sambungan kuat tanpa celah, melindungi hunian dari kebocoran. Ringan dan mudah dipasang, genteng ini ideal untuk projek arsitektur modern yang menuntut performa dan estetika tinggi.",
         specs: [
@@ -139,7 +139,7 @@ const productsData = [    // Data produk tetap sama seperti sebelumnyaconst prod
             "product/img/gepak1.jpg"
         ],
         description: "Genteng ekonomis dengan gaya tradisional solid, pori rendah, ringan, mudah pasang, tampilan rumah natural.",
-        price: "Rp 1.650 / buah",
+        price: "Rp 1.525 / buah",
         category: "kw1",
         fullDescription: "Genteng Plentong Gepak menawarkan kualitas genteng tradisional dengan bentuk papak datar. Dimensi 29 × 21 cm, jarak reng 22 cm, ketebalan 1,3 cm, berat ± 1,4 kg, kebutuhan 25 pcs/m². Made in Indonesia dari tanah liat alami yang dibakar pada suhu tinggi, menghasilkan kepadatan optimal dan pori rendah. Profil gepak memudahkan overlapping antar keping, meminimalkan risiko bocor. Permukaan matt memberikan nuansa rustic, cocok untuk konsep natural atau tradisional. Pemasangan cepat, perawatan minimal, hadir dengan harga terjangkau.",
         specs: [
@@ -160,7 +160,7 @@ const productsData = [    // Data produk tetap sama seperti sebelumnyaconst prod
             "product/img/plentong2.jpg"
         ],
         description: "Genteng ekonomis dengan kualitas memadai untuk bangunan sederhana estetika melengkung klasik, ketahanan baik, ventilasi prima, metode pemasangan fleksibel.",
-        price: "Rp 1.650 / buah",
+        price: "Rp 1.525 / buah",
         category: "kw1",
         fullDescription: "Genteng Plentong Bulat memiliki ujung melengkung khas yang mempercantik profil atap. Ukuran 29 × 21 cm, jarak reng 22 cm, ketebalan 1,3 cm, berat ± 1,5 kg, kebutuhan 25 pcs/m². Tanah liat berkualitas tinggi diproses presisi, menghasilkan struktur kuat dan pori rendah. Bentuk bunder mendukung aliran air hujan efisien sekaligus menambah ventilasi alami di bawah atap. Ringan dan mudah dipasang dengan metode fleksibel, genteng ini cocok untuk renovasi bangunan lama maupun konstruksi baru bergaya tradisional. Perawatan rendah dan daya tahan sudah terbukti.",
         specs: [
@@ -172,12 +172,12 @@ const productsData = [    // Data produk tetap sama seperti sebelumnyaconst prod
     },
     {
         id: 8,title: "etalase kosong",
-        image: "product/img/genteng.png",
+        image: "product/img/genteng_plentong.png",
         images: [ // Tambahkan array gambar
-            "product/img/genteng.png",
-            "product/img/genteng.png",
-            "product/img/genteng.png",
-            "product/img/genteng.png"
+            "product/img/genteng_plentong.png",
+            "product/img/genteng_plentong.png",
+            "product/img/genteng_plentong.png",
+            "product/img/genteng_plentong.png"
         ],
         description: "space iklan Kosong.",
         price: "Rp 0.000 / buah",
@@ -193,12 +193,12 @@ const productsData = [    // Data produk tetap sama seperti sebelumnyaconst prod
     {
         id: 9,
         title: "etalase kosong",
-        image: "product/img/genteng.png",
+        image: "product/img/genteng_kerpus.png",
         images: [ // Tambahkan array gambar
-            "product/img/genteng.png",
-            "product/img/genteng.png",
-            "product/img/genteng.png",
-            "product/img/genteng.png"
+            "product/img/genteng_kerpus.png",
+            "product/img/genteng_kerpus.png",
+            "product/img/genteng_kerpus.png",
+            "product/img/genteng_kerpus.png"
         ],
         description: "space iklan Kosong.",
         price: "Rp 0.000 / buah",
